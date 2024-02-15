@@ -12,7 +12,6 @@ body{
     font-size: 3em;
     font-family: poppins;
     color: rgb(255, 255, 255);
-    position:;
     text-align: center;
     padding-top: 1em;
 }
@@ -40,6 +39,7 @@ body{
 .caja-texto{
     width: 25em;
     height: 10em;
+    border-radius: 10px;
 }
 
 .contenedor-alerta {
@@ -48,7 +48,7 @@ body{
     padding-top: 1em;
 }
 
-.icono {
+.icono-alerta {
     width: 1.5em;
 }
 
@@ -69,7 +69,15 @@ input{
 
 .contenedor-parrafo{
     color: white;
+    text-align: center;
+    padding-top: 5em;
 }
+
+.contenedor-copiar{
+    text-align: center;
+}
+
+
 
 
 

@@ -5,19 +5,11 @@
 }
  
 body{
-    background-color: rgb(0, 0, 0);
-}
-      
-.titulo{
-    font-size: 3em;
-    font-family: poppins;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 1em;
+    background-color: #000000;
 }
 
 .contenedor-imagen {
-    width: 70%; /* Ajusta el ancho del contenedor según tus necesidades */
+    width: 50%; /* Ajusta el ancho del contenedor según tus necesidades */
     margin: 0 auto; /* Esto centrará el contenedor horizontalmente */
     text-align: center; /* Esto centrará la imagen en caso de que sea un elemento en línea */
     padding-top: 3em;
@@ -27,7 +19,19 @@ body{
     width: 50%;
     border-radius: 50%;
     opacity: 0.8;
+
 }
+      
+.titulo{
+    font-size: 2em;
+    font-family: poppins;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: .5em;
+    text-transform: capitalize;
+}
+
+
 
 .seccion1{
     width: 100%;
@@ -37,7 +41,7 @@ body{
 }
 
 .caja-texto{
-    width: 25em;
+    width: 23em;
     height: 10em;
     border-radius: 10px;
 }
@@ -58,14 +62,20 @@ body{
 
 .contenedor-botones{
     padding-top: 3em;
+  
 }
 
-input{
-    width: 10em;
+input {
+    width: 23em;
     height: 3em;
-    margin: 10px 20px;
+    display: grid;
     border-radius: 10px;
+    margin: 1em auto;
+    border-color: #0A3871;
+    border-width: 2px;
+    
 }
+
 
 .contenedor-parrafo{
     color: white;

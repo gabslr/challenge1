@@ -80,18 +80,28 @@ input {
 }
 
 .contenedor-parrafo{
-    color: rgb(255, 255, 255);
+    
     text-align: center;
-    padding: 2em;
+    overflow-y: hidden;
+    width: 100%;
 }
 
 .mensaje-nulo{
     font-size: 20px;
+    text-align: center;
+    width: 14em;
+    height: 8em;
+    color: #ffffff;
+    background: #000000;
+    border: none;
+    
 }
 
 .mensaje-indicacion{
     font-size: 15px;
     padding-top: 1em;
+    color: #ffffff;
+    
 }
 
 .contenedor-copiar{
@@ -99,9 +109,7 @@ input {
     padding-top: 2em;
 }
 
-.ocultar{
-    display: none;
-}
+
 
 
 

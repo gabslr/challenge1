@@ -27,7 +27,7 @@
     <section class="seccion1">
 
         <div class="contenedor-caja">
-            <textarea placeholder="Ingrese el texto aquí" class="caja-texto"></textarea>
+            <textarea placeholder="Ingrese el texto aquí" class="caja-texto" id="ingreso-texto"></textarea>
         </div>
 
         <div class="contenedor-alerta">
@@ -36,17 +36,17 @@
         </div>
 
         <div class="contenedor-botones">
-            <input type="button" class="boton-encriptar" value="Encriptar">
-            <input type="button" class="boton-desencriptar" value="Desencriptar">
+            <input type="button" class="boton-encriptar" value="Encriptar" id="b-encriptar">
+            <input type="button" class="boton-desencriptar" value="Desencriptar" id="b-desencriptar">
         </div>
 
     </section>
 
-    <section class="seccion2">
+    <section class="seccion2" id="seccion-instrucciones">
 
         <div class="contenedor-parrafo">
-            <h2 class="mensaje-nulo">Ningún mensaje fue <br> encontrado</h2>
-            <p class="mensaje-indicacion">Ingrese el texto que desee encriptar o desencriptar</p>
+            <textarea class="mensaje-nulo" id="mensaje-final">Ningun mensaje fue encontrado</textarea>
+            <p class="mensaje-indicacion" id="mensaje-instruccion">Ingrese el texto que desee encriptar o desencriptar</p>
         </div>
 
     </section>
@@ -54,7 +54,7 @@
     <section class="seccion3">
 
         <div class="contenedor-copiar">
-            <input type="button" class="boton-copiar" value="Copiar">
+            <input type="button" class="boton-copiar" value="Copiar" id="b-copiar">
         </div>
 
         <div class="contenedor-resultado">

@@ -1,101 +1,71 @@
-let botonEncriptar = document.querySelector(".boton-encriptar");
-let botonDesencriptar = document.querySelector(".boton-desencriptar");
-let contenedor = document.querySelector(".contenedor-parrafo");
-let resultado= document.querySelector(".texto-resultado");
+
+let ingresoTexto = document.getElementById("ingreso-texto");
+let botonEncriptar = document.getElementById("b-encriptar");
+let botonDesencriptar = document.getElementById("b-desencriptar");
+let botonCopiar = document.getElementById("b-copiar");
+let mensajeFinal = document.getElementById("mensaje-final");
+let mensajeInstruccion = document.getElementById("mensaje-instruccion");
+let seccionInstrucciones = document.getElementById("seccion-instrucciones");
+
+let remplazar = [
+    ["e", "enter"],
+    ["0", "ober"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["u", "ufat"],
+];
+
+let replace = (nuevoValor) => {
+    mensajeFinal.innerHTML = nuevoValor;
+
+    mensajeInstruccion.style.display = "none";
+    botonCopiar.style.display = "block";
+
+}
 
 botonEncriptar.addEventListener("click", () =>{
-    
-}
-)
-botonDesencriptar.onclick = desencriptar;
+    let texto = ingresoTexto.value.toLowerCase();
+    function encriptar(newText) {
+        for(let i = 0; i < remplazar.length; i++){
+            if (newText.includes(remplazar[i][0])){
+                newText = newText.replaceAll(remplazar[i][0], remplazar[i][1]);
 
-
-
-function encriptar(){
-    ocultarAdelante();
-    let cajatexto = recuperarTexto();
-    resultado.textContent = encriptarTexto(cajatexto);}
-
-function desencriptar(){
-     ocultarAdelante();
-     let cajatexto = recuperarTexto();
-     resultado.textContent = desencriptarTexto(cajatexto);}
-
-function recuperarTexto(){
-    let cajatexto = document.querySelector(".cajatexto")
-    return cajatexto.value}
-
-function ocultarAdelante(){
-    contenedor.classList.add("ocultar");
-}
-
-function encriptarTexto(mensaje){
-    let texto = mensaje;
-    let textoFinal = "";
-
-    for(let i = 0; i < texto.length; i++){
-        if(texto [i] == "a"){
-            textoFinal = textoFinal + "ai"
+            }
         }
-        else if(texto[i] == "e"){
-            textoFinal = textoFinal + "enter"
-        }
-        else if(texto[i] == "i"){
-            textoFinal = textoFinal + "imes"
-        }
-        else if(texto[i] == "o"){
-            textoFinal = textoFinal + "ober"
-        }
-        else if(texto[i] == "u"){
-            textoFinal = textoFinal + "ufat"
-        }
-        else{
-            textoFinal = textoFinal + texto[i]
-        }
-        }
-        return textoFinal;
+        return newText;
     }
 
-function desencriptarTexto(mensaje){
-        let texto = mensaje;
-        let textoFinal = "";
+    //let textoEncriptado = encriptar(texto);
+
+    replace(encriptar(texto));
+
+    //mensajeFinal.innerHTML = textoEncriptado;
+
     
-        for(let i = 0; i < texto.length; i++){
-            if(texto [i] == "a"){
-                textoFinal = textoFinal + "a"
-                i = i+1;
+    
+
+})
+
+botonDesencriptar.addEventListener("click", () =>{
+    let texto = ingresoTexto.value.toLowerCase();
+    function desencriptar(newText) {
+        for(let i = 0; i < remplazar.length; i++){
+            if (newText.includes(remplazar[i][1])){
+                newText = newText.replaceAll(remplazar[i][1], remplazar[i][0]);
+
             }
-            else if(texto[i] == "e"){
-                textoFinal = textoFinal + "e"
-                i = i+4;
-            }
-            else if(texto[i] == "i"){
-                textoFinal = textoFinal + "i"
-                i = i+3;
-            }
-            else if(texto[i] == "o"){
-                textoFinal = textoFinal + "o"
-                i = i+3;
-            }
-            else if(texto[i] == "u"){
-                textoFinal = textoFinal + "u"
-                i = i+3;
-            }
-            else{
-                textoFinal = textoFinal + texto[i]
-            }
-            }
-            return textoFinal;
+        }
+        return newText;
     }
 
-    const botonCopiar = document.querySelector(".boton-copiar");
-    botonCopiar.addEventListener("click", copiar = () => {
-        let contenido = document.querySelector(".texto-resultado").textContent;
-        navigator.clipboard.writeText(contenido);
-        console.log("hola");
+    //let textoDesencriptado = desencriptar(texto);
+
+    replace(desencriptar(texto));
+
+   // mensajeFinal.innerHTML = textoDesencriptado;
 })
 
 
 
 
-        
+

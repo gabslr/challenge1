@@ -6,6 +6,9 @@ let botonCopiar = document.getElementById("b-copiar");
 let mensajeFinal = document.getElementById("mensaje-final");
 let mensajeInstruccion = document.getElementById("mensaje-instruccion");
 let seccionInstrucciones = document.getElementById("seccion-instrucciones");
+let botonLimpiar = document.getElementById("b-limpiar");
+let mensajeOriginal = "Ningun mensaje fue encontrado";
+
 
 let remplazar = [
     ["e", "enter"],
@@ -31,6 +34,7 @@ botonEncriptar.addEventListener("click", () =>{
                 newText = newText.replaceAll(remplazar[i][0], remplazar[i][1]);
 
             }
+            
         }
         return newText;
     }
@@ -40,9 +44,6 @@ botonEncriptar.addEventListener("click", () =>{
     replace(encriptar(texto));
 
     //mensajeFinal.innerHTML = textoEncriptado;
-
-    
-    
 
 })
 
@@ -64,6 +65,23 @@ botonDesencriptar.addEventListener("click", () =>{
 
    // mensajeFinal.innerHTML = textoDesencriptado;
 })
+
+
+
+botonLimpiar.addEventListener("click", () => {
+    limpiar('ingresoTexto', 'mensajeFinal', 'mensajeInstruccion');
+});
+
+function limpiar( _ingresoTexto, _mensajeFinal, _mensajeInstruccion) {
+    // Cambia el selector según tus necesidades
+    document.getElementById('ingreso-texto').value = '';
+    document.getElementById('mensaje-final').innerHTML = '';
+    document.getElementById('mensaje-instruccion').style.display = 'block';
+    document.getElementById('mensaje-final').innerHTML = mensajeOriginal;
+}
+
+
+
 
 botonCopiar.addEventListener("click", () => {
     let texto = mensajeFinal;

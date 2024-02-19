@@ -16,7 +16,7 @@ body{
 }
 
 .imagen-fondo{
-    width: 50%;
+    width: 20%;
     border-radius: 50%;
     opacity: 0.8;
 }
@@ -108,6 +108,66 @@ input {
     text-align: center;
     padding-top: 2em;
 }
+
+@media screen and (min-width: 768px){
+.imagen-fondo{
+    width: 20%;
+    }
+
+    .contenedor-general {
+      display: flex;
+      justify-content:space-evenly;
+    }
+  
+    /* Estilos para la Sección 1 (izquierda) */
+    .seccion1 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+
+    .derecha{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        padding-top: 2.5em;
+    }
+   
+
+   }
+    
+  
+    
+    
+   
+
+   
+        
+    
+  
+  
+  
+
+
+
+
+
+        
+       
+
+
+     
+
+    
+        
+   
+
+
+
 
 
 

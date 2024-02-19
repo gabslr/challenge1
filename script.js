@@ -65,6 +65,17 @@ botonDesencriptar.addEventListener("click", () =>{
    // mensajeFinal.innerHTML = textoDesencriptado;
 })
 
+botonCopiar.addEventListener("click", () => {
+    let texto = mensajeFinal;
+    navigator.clipboard.writeText(texto.value);
+    //texto.select();
+    //document.execCommand('copy');
+
+    mensajeFinal.innerHTML = "";
+     
+})
+
+
 
 
 

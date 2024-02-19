@@ -8,8 +8,6 @@ let mensajeInstruccion = document.getElementById("mensaje-instruccion");
 let seccionInstrucciones = document.getElementById("seccion-instrucciones");
 let botonLimpiar = document.getElementById("b-limpiar");
 let mensajeOriginal = "Ningun mensaje fue encontrado";
-
-
 let remplazar = [
     ["e", "enter"],
     ["0", "ober"],
@@ -45,7 +43,7 @@ botonEncriptar.addEventListener("click", () =>{
 
     //mensajeFinal.innerHTML = textoEncriptado;
 
-})
+});
 
 botonDesencriptar.addEventListener("click", () =>{
     let texto = ingresoTexto.value.toLowerCase();
@@ -64,9 +62,7 @@ botonDesencriptar.addEventListener("click", () =>{
     replace(desencriptar(texto));
 
    // mensajeFinal.innerHTML = textoDesencriptado;
-})
-
-
+});
 
 botonLimpiar.addEventListener("click", () => {
     limpiar('ingresoTexto', 'mensajeFinal', 'mensajeInstruccion');
@@ -80,9 +76,6 @@ function limpiar( _ingresoTexto, _mensajeFinal, _mensajeInstruccion) {
     document.getElementById('mensaje-final').innerHTML = mensajeOriginal;
 }
 
-
-
-
 botonCopiar.addEventListener("click", () => {
     let texto = mensajeFinal;
     navigator.clipboard.writeText(texto.value);
@@ -91,8 +84,7 @@ botonCopiar.addEventListener("click", () => {
 
     mensajeFinal.innerHTML = "";
      
-})
-
+});
 
 
 
